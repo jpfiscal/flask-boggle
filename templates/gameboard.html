@@ -1,6 +1,14 @@
 {% extends 'base.html' %}
 {% block title %}Boggle!{% endblock %}
 {% block content %}
+  <h1 id="timer_display"></h1>
+  <h2 id="guess_result">Type the words you find below!</h2>
+  <h3 id="current_score">Score: 0</h3>
+  <form id="guess_form">
+    <label for="guess_input">Guess:</label>
+    <input type="text" id="guess_input">
+    <input type="submit" id="submit_guess">
+  </form>
   <table id="gameboard_tbl">
     {% for row in gameboard%}
         <tr>
